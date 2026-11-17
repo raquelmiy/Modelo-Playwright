@@ -1,8 +1,8 @@
 {
-  "name": "salesforce-app",
+  "name": "modelo-playwright",
   "private": true,
   "version": "1.0.0",
-  "description": "Salesforce App",
+  "description": "Repositório-modelo da automação de testes E2E com Playwright para projetos Salesforce",
   "scripts": {
     "test:e2e": "playwright test"
   },

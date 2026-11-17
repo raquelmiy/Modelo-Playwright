@@ -29,7 +29,7 @@ Executar os comandos a partir da raiz do repositório.
 | `npm run test:e2e` | Todas as suítes, em todos os perfis ativos |
 | `npx playwright test tests/e2e/specs/smoke` | Somente a conexão com a org |
 | `npx playwright test tests/e2e/specs/exemplo` | Somente o teste de exemplo (IT, seção 4.6) |
-| `npx playwright test tests/e2e/specs/fluxos/Lead` | Somente as suítes de um objeto |
+| `npx playwright test tests/e2e/specs/fluxos/lead` | Somente as suítes de uma pasta |
 | `npx playwright test tests/e2e/specs/acesso` | Somente a conferência de acesso |
 
 Rodar o smoke primeiro. Se o smoke falhar, então o problema é de acesso à org, não de regra de negócio.
@@ -40,6 +40,7 @@ Rodar o smoke primeiro. Se o smoke falhar, então o problema é de acesso à org
 |----------|--------|
 | `PERFIS` | Limita os perfis da rodada. Exemplo: `PERFIS=admin,sdr`. Sem a variável, rodam todos os perfis |
 | `SF_TARGET_ORG` | Substitui o alias da CLI do perfil padrão |
+| `DASHBOARD_RESET` | Com `1`, o painel descarta o histórico e começa da rodada atual |
 
 ## Perfis
 
@@ -57,7 +58,7 @@ tests/e2e/
 ├── specs/                    Suítes (*.spec.js). Única pasta que o Playwright coleta
 │   ├── smoke/                Conexão com a org (CLI, login, Lightning)
 │   ├── exemplo/              Teste de exemplo da IT: massa pela API, tela, conferência pela API
-│   ├── fluxos/<Objeto>/      Fluxos de negócio, uma pasta por objeto Salesforce (Lead, Account…)
+│   ├── fluxos/               Fluxos de negócio, organizados como o Jira do projeto (épico, história ou objeto)
 │   └── acesso/               Conferência de permissões por perfil (API e tela)
 ├── pages/                    Page Objects
 │   ├── RecordPage.js         Formulário padrão de qualquer objeto (abrir novo, preencher, salvar)

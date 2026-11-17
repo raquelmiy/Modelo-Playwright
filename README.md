@@ -34,9 +34,13 @@ O passo a passo completo está na IT do framework, no Confluence: [Instalar e Ut
 
 **Regra:** a automação roda sempre em Sandbox. Nunca execute os testes em Produção.
 
+## Responsável pela automação
+
+Todo projeto precisa de um responsável pela automação, definido no início do projeto e registrado no `qaResponsavel` do `dashboard.config.json`. Ele cria e configura os usuários de teste, define quando o Painel de QA vai para o PO e mantém os testes: quando uma regra de negócio, um layout ou um perfil muda, atualiza os cenários afetados na mesma entrega, para que continuem validando a regra vigente. As tarefas completas estão na seção 4.11 da IT.
+
 ## Teste de exemplo
 
-`tests/e2e/specs/exemplo/exemplo.spec.js` é o exemplo da seção 4.6 da IT, escrito com as utils deste repositório. Ele cria um Lead pela API, abre o registro na tela, confere o nome, confere pela API o que foi gravado, e a limpeza do fim da rodada exclui o Lead. Use-o como ponto de partida da primeira suíte em `tests/e2e/specs/fluxos/<Objeto>/`.
+`tests/e2e/specs/exemplo/exemplo.spec.js` é o exemplo da seção 4.6 da IT, escrito com as utils deste repositório. Ele cria um Lead pela API, abre o registro na tela, confere o nome, confere pela API o que foi gravado, e a limpeza do fim da rodada exclui o Lead. Use-o como ponto de partida da primeira suíte em `tests/e2e/specs/fluxos/`, com pastas e arquivos sem acento e sem espaço (ex.: `fluxos/lead/`).
 
 ## Estrutura
 

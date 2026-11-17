@@ -13,9 +13,6 @@ auth.json
 .sf/
 .localdevserver/
 coverage/
-test-results/
-playwright-report/
-graphify-out/
 
 # Resultados da automação Playwright
 test-results/
